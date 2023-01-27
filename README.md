@@ -6,10 +6,10 @@
 
 ## Database (Yugabyte) :
 ### How to create/run database using Yugabyte :
--For installation, make sure you follow this documentation (https://docs.yugabyte.com/preview/quick-start-yugabytedb-managed/)
--Note that a free account can only create one cluster and if you want to use more than one cluster, you can only create a new account or delete the current cluster.
--After connecting to YugabyteDB cloud shell  you can write your postgresql query in there to modify the database. For example, create tables, insert into and more.
--If you don't want to connect using YugabyteDB cloud shell, you can try to use others by following their documentation
+1) For installation, make sure you follow this documentation (https://docs.yugabyte.com/preview/quick-start-yugabytedb-managed/)
+2) Note that a free account can only create one cluster and if you want to use more than one cluster, you can only create a new account or delete the current cluster.
+3) After connecting to YugabyteDB cloud shell  you can write your postgresql query in there to modify the database. For example, create tables, insert into and more.
+4) If you don't want to connect using YugabyteDB cloud shell, you can try to use others by following their documentation
 ![image8](https://user-images.githubusercontent.com/123624174/215009396-0ed13985-687b-4cc1-9931-d2e9be7133f1.png)
 
 -Remember to download the .crt file for authorized connection as well as add your current IP address into the cluster. You can do this by going Actions > Edit IP Allow List. After this just click add current IP address then all should be good.
@@ -51,7 +51,33 @@
 4) (DONE) will be seen in the console, this means that the backend code is running in the background. Note that, while this is running, you might encounter errors of (Max connection) in your YugabyteDB cloud shell  (where you enter the postgresql query to modify your database) if you tried to connect it. The solution for this is to stop this Java backend code,then try to connect the YugabyteDB cloud shell again then it should be fixed. You can stop the code by clicking the red button below the image I showed or just kill terminate at the terminal sections. 
 ![image6](https://user-images.githubusercontent.com/123624174/215010190-36597bd1-8e7c-453c-b61f-9799ececcb8d.png)
 
+### SQL File TO Initiated Database (Query)
+1) You can run query in the YugabyteDB cloud shell or using Docker (Commands located in query.txt)
+2) The query’s file will be located in here : (https://drive.google.com/drive/folders/1ffY7ogBzQwsx_ZyAjwwg-Ib_XM6-Bd01?usp=sharing)
+3) For query.txt, it consists of what commands to used to connect to docker and how the tables are created and inserted.
+4) For query2.txt, it consists of some query that can be used for data analysts.
 
 
 
+
+
+## API
+### How to create/run API using JAVA
+1) First of all make sure you have all prerequisites downloaded (Java & Maven especially). For more information and prerequisites, you can check this link (https://spring.io/guides/gs/rest-service/)
+2) There’s no need to follow the steps in the link above or this youtube link: (https://youtu.be/MWLe1tqPmUo) since I already create a repo to cloned from github (https://github.com/Dison987/https---github.com-Dison987-apiCodes.git) but it will be great sources to show you how I build the REST API using Java.
+3) Note that, for this API to connect with YugabyteDB, I’ll be using the JDBC library instead of the JPA library because the JPA documentation is only valid for spring boot 2.0 while I’m using spring boot 3.0. 
+![image17](https://user-images.githubusercontent.com/123624174/215010841-2b0456b2-ba02-4c3d-954b-7e5ad9fd3dcc.png)
+
+As you can see above, there’s JDBC dependency in my pom.xml file.
+4)For more information on how to connect API with yugabyteDB using JDBC library, you can check out this documentation : (https://bushansirgur.in/spring-jdbc/) .
+5)If you wish to run the codes, make sure to type the command : (mvn clean install spring-boot:run)  	
+![image12](https://user-images.githubusercontent.com/123624174/215010915-b1d1fd15-c382-48ce-89bb-471a6ab2939c.png)
+If (DONE) appeared in the console, this indicates the API is working now. To test whether the API is working, you can try to use Postman.
+![image21](https://user-images.githubusercontent.com/123624174/215011173-8f6a29f6-9001-47c0-94e2-dd5467b901ac.png)
+If there's a list of Users returned in body, this means the API is functioning and you can now run the frontend code (Flutter). 
+
+## Accessing OpenAPI Documentations
+i) Start backend code as mentioned above
+ii) Access the documentation with this address :
+(http://localhost:8080/swagger-ui/index.html#/)
 
