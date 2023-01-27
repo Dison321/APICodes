@@ -64,7 +64,7 @@
 ## API
 ### How to create/run API using JAVA
 1) First of all make sure you have all prerequisites downloaded (Java & Maven especially). For more information and prerequisites, you can check this link (https://spring.io/guides/gs/rest-service/)
-2) There’s no need to follow the steps in the link above or this youtube link: (https://youtu.be/MWLe1tqPmUo) since I already create a repo to cloned from github (https://github.com/Dison987/https---github.com-Dison987-apiCodes.git) but it will be great sources to show you how I build the REST API using Java.
+2) There’s no need to follow the steps in the link above or this youtube link: (https://youtu.be/MWLe1tqPmUo) since I already create a repo to cloned from github (https://github.com/Dison321/APICodes.git) but it will be great sources to show you how I build the REST API using Java.
 3) Note that, for this API to connect with YugabyteDB, I’ll be using the JDBC library instead of the JPA library because the JPA documentation is only valid for spring boot 2.0 while I’m using spring boot 3.0. 
 ![image17](https://user-images.githubusercontent.com/123624174/215010841-2b0456b2-ba02-4c3d-954b-7e5ad9fd3dcc.png)
 
