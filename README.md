@@ -53,7 +53,7 @@
 
 ### SQL File TO Initiated Database (Query)
 1) You can run query in the YugabyteDB cloud shell or using Docker (Commands located in query.txt)
-2) The query’s file will be located in here : (https://drive.google.com/drive/folders/1ffY7ogBzQwsx_ZyAjwwg-Ib_XM6-Bd01?usp=sharing)
+2) The query’s file will be located in here : (https://drive.google.com/drive/folders/1D4qUXF7N5i3vldMBnIpo2JdzRESppnxf?usp=share_link)
 3) For query.txt, it consists of what commands to used to connect to docker and how the tables are created and inserted.
 4) For query2.txt, it consists of some query that can be used for data analysts.
 
